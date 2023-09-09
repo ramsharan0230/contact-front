@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <HeaderComp /> <!-- Include the Header component -->
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <router-view></router-view> <!-- This is where your views will be displayed -->
+      </div>
+    </div>
+    <FooterComp /> <!-- Include the Footer component -->
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComp from './components/Header.vue'; // Import the Header component
+import FooterComp from './components/Footer.vue'; // Import the Footer component
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    HeaderComp,
+    FooterComp,
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
